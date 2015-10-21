@@ -21,13 +21,13 @@ import (
 
 const (
 	Version  = "1.0"
-	Password = "123456"
+	Password = "1473692468"
 )
 
 var (
 	secureTransport *http.Transport = &http.Transport{
 		TLSClientConfig: &tls.Config{
-			InsecureSkipVerify: false,
+			pVerify: false,
 			ClientSessionCache: tls.NewLRUClientSessionCache(1000),
 		},
 		TLSHandshakeTimeout: 30 * time.Second,
